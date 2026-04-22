@@ -14,7 +14,10 @@ Interactive portfolio site with a name gate and visitor capture through Netlify 
 The entry gate submits names to the hidden Netlify form named `visitor-log`.
 Open `https://app.netlify.com/` and view the site's **Forms** submissions to see visitors.
 
+## Portrait
+
+Replace `site/assets/rudhra_image/portrait.png` with your latest image to update the hero photo.
+
 ## Local preview
 
 You can still run a simple static server for preview, but Netlify deployment does not use `server.py`.
-

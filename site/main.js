@@ -133,38 +133,31 @@ function initSkillStacks() {
   if (!stacks.length) return;
 
   const sets = {
-    prog: ["Python", "DSA", "OOP", "DBMS", "Java"],
-    web: ["HTML", "CSS", "SQL", "FastAPI", "Docker", "Agile/Scrum", "React", "Next.js", "GitHub", "Postman"],
-    ai: ["RAG", "LangChain", "FAISS", "Pinecone", "LLMs", "OCR", "Azure Vision", "Tesseract"],
+    prog: ["Python", "Java", "JavaScript", "HTML5", "CSS3"],
+    web: ["React", "Flask", "SQL", "MongoDB", "REST APIs", "JWT/OAuth"],
+    ai: ["Machine Learning", "AI Agents", "Feature Engineering", "Qiskit", "TensorFlow"],
   };
 
   const proof = {
-    python: "Used across projects + coursework.",
-    dsa: "Coursework + problem solving.",
-    oop: "Core CS foundation.",
-    dbms: "Coursework + SQL usage.",
-    java: "Basics (coursework).",
-    html: "Built interactive UIs.",
-    css: "Performance + accessibility.",
-    sql: "DBMS + real usage.",
-    fastapi: "Backend APIs.",
-    docker: "Containerized workflows.",
-    "agile/scrum": "Team execution style.",
-    react: "Modern frontend builds.",
-    "next.js": "App routing + SSR patterns.",
-    github: "Version control + collaboration.",
-    postman: "API testing.",
-    rag: "Document Analysis RAG.",
-    langchain: "RAG orchestration.",
-    faiss: "Vector retrieval.",
-    pinecone: "Vector DB experience.",
-    llms: "Prompting + integration.",
-    ocr: "Smart Food tracker.",
-    "azure vision": "Expiry detection pipeline.",
-    tesseract: "OCR extraction.",
+    python: "Used in healthcare, ML, and automation projects.",
+    java: "Core programming + academic foundation.",
+    javascript: "Frontend interactivity and app logic.",
+    html5: "Responsive UI structure.",
+    css3: "Layout, polish, and motion.",
+    react: "Built responsive web experiences.",
+    flask: "Backend APIs and app wiring.",
+    sql: "Data storage, analytics, and queries.",
+    mongodb: "NoSQL app data.",
+    "rest-apis": "Integrated external services and data flows.",
+    "jwt-oauth": "Authentication workflows.",
+    "machine-learning": "Prediction, evaluation, and modeling.",
+    "ai-agents": "Applied in AI-driven workflows.",
+    "feature-engineering": "Improved model quality and signals.",
+    qiskit: "Quantum simulation for research.",
+    tensorflow: "Model training and experimentation.",
   };
 
-  const normalize = (s) => s.trim().toLowerCase();
+  const normalize = (s) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
   let activeKey = "";
   let tooltip = null;
@@ -590,16 +583,16 @@ function initBackground3D() {
     const light = document.documentElement.dataset.theme === "light";
     return light
       ? {
-          c1: "6,182,212", // cyan
-          c2: "124,58,237", // violet
-          c3: "16,185,129", // green
-          star: "8,145,178",
+          c1: "14,165,233", // sky
+          c2: "249,115,22", // orange
+          c3: "124,58,237", // violet
+          star: "56,189,248",
         }
       : {
-          c1: "34,211,238",
-          c2: "139,92,246",
-          c3: "167,243,208",
-          star: "34,211,238",
+          c1: "56,189,248",
+          c2: "245,158,11",
+          c3: "168,85,247",
+          star: "56,189,248",
         };
   }
 
