@@ -51,8 +51,12 @@ function initGate() {
   const hint = $("#gate-hint");
   const hello = $("#hello");
 
-  const existing = (localStorage.getItem("viewerName") || "").trim();
+  const existingRaw = (localStorage.getItem("viewerName") || "").trim();
+  const existing = ["ganesh", "ganesh suraj"].includes(existingRaw.toLowerCase())
+    ? "Rudrabhishek"
+    : existingRaw;
   if (existing) {
+    if (existing !== existingRaw) localStorage.setItem("viewerName", existing);
     gate?.remove();
     if (hello) hello.textContent = `Hi, ${existing}`;
     const pending = (localStorage.getItem("pendingVisitName") || "").trim();
